@@ -1,0 +1,70 @@
+devasc@labvm:~/Documents/Pythonscripts$ git init
+Initialized empty Git repository in /home/devasc/Documents/Pythonscripts/.git/
+devasc@labvm:~/Documents/Pythonscripts$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+devasc@labvm:~/Documents/Pythonscripts$ echo "#sysadmin" >> README.md
+devasc@labvm:~/Documents/Pythonscripts$ git init
+Reinitialized existing Git repository in /home/devasc/Documents/Pythonscripts/.git/
+devasc@labvm:~/Documents/Pythonscripts$ git add readme.md
+fatal: pathspec 'readme.md' did not match any files
+devasc@labvm:~/Documents/Pythonscripts$ git add README.md
+devasc@labvm:~/Documents/Pythonscripts$ git commit -m "first commit"
+[master (root-commit) 50aaad2] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+devasc@labvm:~/Documents/Pythonscripts$ git branch -M main
+devasc@labvm:~/Documents/Pythonscripts$ git remote add origin https://github.com/JorenSiperius/sysadmin
+devasc@labvm:~/Documents/Pythonscripts$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 76.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/JorenSiperius/sysadmin
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+devasc@labvm:~/Documents/Pythonscripts$ ^C
+devasc@labvm:~/Documents/Pythonscripts$ git add from flask import flask.py
+fatal: pathspec 'from' did not match any files
+devasc@labvm:~/Documents/Pythonscripts$ git add flask_app.py
+devasc@labvm:~/Documents/Pythonscripts$ git add static/
+devasc@labvm:~/Documents/Pythonscripts$ git add templates/
+devasc@labvm:~/Documents/Pythonscripts$ git commit -m "second commit"
+[main ef36d6d] second commit
+ 3 files changed, 28 insertions(+)
+ create mode 100644 flask_app.py
+ create mode 100644 static/style.css
+ create mode 100644 templates/index.html
+devasc@labvm:~/Documents/Pythonscripts$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 863 bytes | 863.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/JorenSiperius/sysadmin
+   50aaad2..ef36d6d  main -> main
+devasc@labvm:~/Documents/Pythonscripts$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   flask_app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+devasc@labvm:~/Documents/Pythonscripts$ git add .
+devasc@labvm:~/Documents/Pythonscripts$ git commit -m "changed port"
+[main d7adf19] changed port
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+devasc@labvm:~/Documents/Pythonscripts$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/JorenSiperius/sysadmin
+   ef36d6d..d7adf19  main -> main
+devasc@labvm:~/Documents/Pythonscripts$ 
